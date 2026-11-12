@@ -10,7 +10,7 @@ st.markdown("Determining statistical correlations between psychological attribut
 
 @st.cache_data
 def load_data():
-    df = pd.read_excel("pilot_questionnaire_cleaned (1)_2.xlsx", sheet_name="Cleaned_Data")
+    df = pd.read_excel("pilot_questionnaire_cleaned (1).xlsx", sheet_name="Cleaned_Data")
     return df
 
 try:
