@@ -31,13 +31,13 @@ try:
     with col_m2:
         st.metric(label="Statistical Significance (p-value)", value=f"{p_value:.4f}")
         
+    # Scatter Plot without statsmodels dependency
     fig_scatter = px.scatter(
         df,
         x=attr,
         y='TEST MARK',
-        trendline="ols",
         template='plotly_dark',
-        title=f"Scatter Plot & Regression Trend: {attr} vs. Test Mark",
+        title=f"Scatter Plot: {attr} vs. Test Mark",
         labels={attr: attr, 'TEST MARK': 'Test Mark'},
         hover_data=['Respondent_ID'] if 'Respondent_ID' in df.columns else None,
         height=550
