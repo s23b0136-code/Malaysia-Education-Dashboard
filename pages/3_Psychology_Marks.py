@@ -31,7 +31,6 @@ try:
     with col_m2:
         st.metric(label="Statistical Significance (p-value)", value=f"{p_value:.4f}")
         
-    # Visualisation: Scatter Plot with Regression Trendline
     fig_scatter = px.scatter(
         df,
         x=attr,
