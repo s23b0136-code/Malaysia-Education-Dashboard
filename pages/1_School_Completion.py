@@ -9,7 +9,7 @@ st.markdown("Evaluating completion rates and pinpointing retention drop-off poin
 
 @st.cache_data
 def load_data():
-   df = pd.read_excel("completion_school_district_cleaned_final.xls", sheet_name=0)
+    df = pd.read_excel("completion_school_district_cleaned_final.xls", sheet_name=0)
     return df
 
 try:
@@ -32,7 +32,6 @@ try:
         
         st.dataframe(pivot_display.style.format(precision=2), use_container_width=True)
         
-        # Visualisation: BAR GRAPH
         fig = px.bar(
             agg_df,
             x='district',
