@@ -9,7 +9,7 @@ st.markdown("Mapping the spatial density of educational institutions and evaluat
 
 @st.cache_data
 def load_data():
-    df = pd.read_excel("dataset_schools_cleaned (1)_2.xlsx", sheet_name="Sheet1")
+  df = pd.read_excel("dataset_schools_cleaned (1).xlsx", sheet_name="Sheet1")
     return df
 
 try:
