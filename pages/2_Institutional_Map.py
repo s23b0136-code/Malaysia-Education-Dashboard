@@ -9,7 +9,7 @@ st.markdown("Mapping the spatial density of educational institutions and evaluat
 
 @st.cache_data
 def load_data():
-  df = pd.read_excel("dataset_schools_cleaned (1).xlsx", sheet_name="Sheet1")
+    df = pd.read_excel("dataset_schools_cleaned (1).xlsx", sheet_name="Sheet1")
     return df
 
 try:
@@ -30,7 +30,6 @@ try:
         status_counts = sub_df['Status'].value_counts().reset_index()
         status_counts.columns = ['Status', 'Count']
         
-        # Visualisation: Donut Chart
         fig_status = px.pie(
             status_counts,
             names='Status',
@@ -46,7 +45,6 @@ try:
         level_counts = sub_df['Level'].value_counts().reset_index()
         level_counts.columns = ['Level', 'Count']
         
-        # Visualisation: Donut Chart
         fig_level = px.pie(
             level_counts,
             names='Level',
@@ -60,7 +58,6 @@ try:
     st.markdown("---")
     st.markdown("### 🌐 Donut Chart Hierarchy (Sunburst Mapping)")
     
-    # Visualisation: Donut Chart Hierarchy
     fig_sunburst = px.sunburst(
         sub_df,
         path=['Level', 'Status', 'Area'],
